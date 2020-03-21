@@ -1,0 +1,65 @@
+<html>
+<head>
+    <style>
+        .ball-pack {      
+            margin-left: 50%;
+            margin-right: 50%;
+            margin-top: 20%;
+        }
+        .bouncing-ball {
+            background: rgb(4, 253, 45);
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            transition: all 3s ease 0s;
+            animation: bouncing 1s ease-in-out infinite alternate forwards;
+            border-radius: 50%;
+        }
+        .bouncing-ball:nth-child(2) {
+            animation-delay: 90ms;
+        }
+        .bouncing-ball:nth-child(3) {
+            animation-delay: 150ms;
+        }
+        .racquet {
+            width: 130px;
+            height: 20px;
+            background: rgb(9, 116, 238);
+            margin-left: 47%;
+            margin-top: -10px;
+        }
+        @keyframes rotatePlayer {
+            0% {
+                transform: rotateY(0deg);
+            }
+            60% {
+                transform: rotateY(60deg);
+            }
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+        @keyframes bouncing {
+            0% {
+                transform: initial;
+            }
+            60% {
+                transform: translate3d(0px, -30px, 0px);
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            100% {
+                transform: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball-pack">
+        <div class="bouncing-ball"></div>
+        <div class="bouncing-ball"></div>
+        <div class="bouncing-ball"></div>  
+    </div>
+    <div class="racquet"></div>
+</body>
+</html>
